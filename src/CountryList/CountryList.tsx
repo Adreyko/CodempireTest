@@ -13,20 +13,20 @@ const CountryList = () => {
     const dispatch = useAppDispatch()
 
     
-    // const sortedByConfirmed = [...data]?.sort((a: ICountries, b: ICountries) => a?.TotalConfirmed - b?.TotalConfirmed )
+    const sortedByConfirmed = data ? [...data]?.sort((a: ICountries, b: ICountries) => a?.TotalConfirmed - b?.TotalConfirmed ) : data
 
-    // const sortyByConfirmed = () => {
-    //     dispatch(setSortByTotal(sortedByConfirmed))
-    // }   
+    const sortyByConfirmed = () => {
+        dispatch(setSortByTotal(sortedByConfirmed))
+    }
 
     const countryEl = data?.map((c, index) => (
         <Country key={c.ID} country={c.Country} number={index} total={c.TotalConfirmed} recovered={c.TotalRecovered} death={c.TotalDeaths} />
     ))
 
-// onClick={sortyByConfirmed}
+
     return (
         <div >
-            <div className='bg-blue-400 h-12 rounded-xl text-white   flex justify-between items-center px-4  mx-16'   > 
+            <div className='bg-blue-400 h-12 rounded-xl text-white   flex justify-between items-center px-4  mx-16' onClick={sortyByConfirmed}  >
                 <div className='flex  h-full items-center '>
                     <div className='h-full border-r-[1px] flex items-center'>
                         <h1 className='px-4'>№</h1>
