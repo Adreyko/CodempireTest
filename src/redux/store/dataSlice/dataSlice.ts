@@ -20,6 +20,9 @@ const dataSlice = createSlice({
         },
         setSortByTotal(state,action){
             state.data = action.payload
+        },
+        setSortByName(state,action){
+            state.data = action.payload
         }
 
     }
@@ -27,7 +30,7 @@ const dataSlice = createSlice({
 
 
 
-export const { setData,setSearchCoutries,setSortByTotal } = dataSlice.actions
+export const { setData,setSearchCoutries,setSortByTotal,setSortByName } = dataSlice.actions
 
 
 export default dataSlice.reducer
