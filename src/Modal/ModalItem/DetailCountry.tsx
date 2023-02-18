@@ -9,7 +9,7 @@ type countryData = {
 
 
 }
-const Item = ({ country, total, recovered, death, setVisible }: countryData) => {
+const DetailCountry = ({ country, total, recovered, death, setVisible }: countryData) => {
   return (
     <div className="bg-white h-[300px] w-[400px] rounded-xl flex flex-col items-center p-4">
       <h1 className='font-bold text-2xl py-4'>{country}</h1>
@@ -39,4 +39,4 @@ const Item = ({ country, total, recovered, death, setVisible }: countryData) => 
   )
 }
 
-export default memo(Item)
+export default memo(DetailCountry)

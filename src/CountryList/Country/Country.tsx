@@ -1,6 +1,6 @@
 import { memo, useState } from 'react'
 import Modal from '../../Modal/Modal'
-import Item from '../../Modal/ModalItem/Item'
+import Item from '../../Modal/ModalItem/DetailCountry'
 type countryData = {
     country: string,
     number: number,

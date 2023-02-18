@@ -4,12 +4,12 @@ import Header from './Header/Header'
 
 const App = () => {
 
-  const [searchInput, setSearchInput] = useState('')
+
 
   return (
     <div >
-      <Header setSearchInput={setSearchInput} />
-      <CountryList searchInput={searchInput} />
+      <Header  />
+      <CountryList  />
     </div>
   )
 }
