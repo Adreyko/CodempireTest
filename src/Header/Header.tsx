@@ -11,11 +11,12 @@ const Header = () => {
 
 
     const [searchInput, setSearchInput] = useState('')
-    const searchedCountries = data?.filter(c =>  c?.Country?.toLowerCase().startsWith(searchInput?.toLowerCase()))
+
+
  
 
-
     const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const searchedCountries = searchInput ? data?.filter(c => c?.Country?.toLowerCase().startsWith(event.currentTarget.value.toLowerCase())) : data
         setSearchInput(event.currentTarget.value)
         dispatch(setSearchCoutries(searchedCountries))
     }

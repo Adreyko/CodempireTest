@@ -1,6 +1,5 @@
 
 import { useEffect, memo, useState } from 'react'
-
 import { useAppDispatch, useAppSelector } from '../redux/hooks/redux-hooks'
 import { fetchData } from '../redux/store/dataSlice/thunk/setFetchData'
 import { url } from '../contants/constants'
